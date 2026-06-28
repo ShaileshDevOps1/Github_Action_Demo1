@@ -11,8 +11,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Display hostname
-        run: hostname
+
 
       - name: Print runner OS
         run: echo ${{ runner.os }}
