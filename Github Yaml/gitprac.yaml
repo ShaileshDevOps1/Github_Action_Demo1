@@ -1,0 +1,18 @@
+name: Test Self Hosted Runner
+
+on:
+  push:
+
+jobs:
+  test:
+    runs-on: [self-hosted, windows, x64]
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Display hostname
+        run: hostname
+
+      - name: Print runner OS
+        run: echo ${{ runner.os }}
